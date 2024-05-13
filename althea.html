@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #341264;
+      }
+      .wrapper {
+        width: 28em;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+      .container {
+        height: 28em;
+        width: 28em;
+        margin: auto;
+        position: relative;
+      }
+
+      .planet {
+        height: 15.62em;
+        width: 15.62em;
+        background-color: #f5d302;
+        border-radius: 50%;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      .planet:before {
+        content: "";
+        position: absolute;
+        height: 1.5em;
+        width: 1.5em;
+        background-color: #d69d00;
+        top: 6em;
+        left: 3em;
+        border-radius: 50%;
+        -webkit-box-shadow: 2em 5em 0 0.6em #d69d00, 2em -2em 0 15px #d69d00;
+                box-shadow: 2em 5em 0 0.6em #d69d00, 2em -2em 0 15px #d69d00;
+      }
+      .satellite {
+        height: 2em;
+        width: 2em;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: relative;
+        left: 5em;
+        bottom: -20em;
+        -webkit-animation: spin 3s infinite;
+                animation: spin 3s infinite;
+        z-index: 1;
+      }
+      a {
+        display: block;
+        background-color: #ffffff;
+        color: #341264;
+        text-align: center;
+        padding: 1em 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1.1em;
+        border-radius: 0.5em;
+      }
+      @-webkit-keyframes spin {
+        49% {
+          z-index: 1;
+        }
+        50% {
+          bottom: -9.3em;
+          left: 23em;
+          z-index: -1;
+        }
+        100% {
+          z-index: -1;
+        }
+      }
+      @keyframes spin {
+        49% {
+          z-index: 1;
+        }
+        50% {
+          bottom: -9.3em;
+          left: 23em;
+          z-index: -1;
+        }
+        100% {
+          z-index: -1;
+        }
+      }
+      @media screen and (max-width: 500px){
+          .wrapper{
+              font-size:0.8em;
+          }
+      }
+</style>
+<body>
+
+   <div class="wrapper">
+      <div class="container">
+        <div class="planet"></div>
+        <div class="satellite"></div>
+      </div>
+      
+    </div>
+</body>
+</html>
